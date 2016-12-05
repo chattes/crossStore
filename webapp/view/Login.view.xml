@@ -1,0 +1,11 @@
+<mvc:View controllerName="sap.ui.chattes.view.Login" xmlns:l="sap.ui.layout"
+          xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+          xmlns:f="sap.ui.layout.form">
+    <Panel width="auto" expanded="true" class="sapUiResponsiveMargin"
+           design="Transparent">
+	   
+        <content>
+		<Button text="Login" type="Accept" press="handleLogin" />
+        </content>
+    </Panel>
+</mvc:View>

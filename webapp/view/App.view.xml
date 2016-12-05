@@ -1,0 +1,48 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ui.chattes.view.App" resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
+	<Shell>
+		<App>
+			<Page title="{i18n>TITLE}" backgroundDesign="Solid">
+				<content>
+					<Input class="todoInput" value="{/scannedItem}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="addTodo" />
+					<List id="todo-list" items="{/selectedItem}" select="toggleCompleted"
+						mode="MultiSelect"
+						growing="true"
+						growingScrollToLoad="true"
+						showNoData="false"
+						showSeparators="None"
+						rememberSelections="false">
+						<CustomListItem selected="{itemImage}">
+							<Input class="todoListInput" value="{item}" />
+						</CustomListItem>
+					</List>
+					<Panel expandable="true" expanded="false" headerText="Basket Analysis" width="auto" class="sapUiResponsiveMargin">
+					<content>
+					</content>
+					</Panel>
+					<Panel expandable="true" expanded="true" headerText="Recommendations and Offers" width="auto" class="sapUiResponsiveMargin">
+					<content>
+				<List id="reco-list" items="{/recommended}" select="toggleCompleted"
+						mode="MultiSelect"
+						growing="true"
+						growingScrollToLoad="true"
+						showNoData="false"
+						showSeparators="None"
+						rememberSelections="false">
+						<CustomListItem selected="{itemImage}">
+							<Input class="todoListInput" value="{item}" />
+						</CustomListItem>
+					</List>
+					</content>
+					</Panel>
+					</content>
+				<footer>
+					<Bar>
+						<contentMiddle>
+							<Button visible = "true" icon="sap-icon://cart" text="Add to Cart ({/completedCount} item/s)" press="clearCompleted" />
+						</contentMiddle>
+					</Bar>
+				</footer>
+			</Page>
+		</App>
+	</Shell>
+</mvc:View>
