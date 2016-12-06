@@ -1,7 +1,7 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ui.chattes.view.App" resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
 	<Shell>
 		<App>
-			<Page title="{i18n>TITLE}" backgroundDesign="Solid">
+			<Page backgroundDesign="Solid">
 				<content>
 					<Input class="todoInput" value="{/scannedItem}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="addTodo" />
 					<List id="todo-list" items="{/selectedItem}" select="toggleCompleted"
@@ -40,6 +40,9 @@
 						<contentMiddle>
 							<Button visible = "true" icon="sap-icon://cart" text="Add to Cart ({/completedCount} item/s)" press="clearCompleted" />
 						</contentMiddle>
+						<contentRight>
+							<Button visible = "true" icon="sap-icon://physical-activity" text="Checkout" press="checkout" />
+						</contentRight>
 					</Bar>
 				</footer>
 			</Page>

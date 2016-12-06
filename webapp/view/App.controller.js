@@ -8,35 +8,36 @@ sap.ui.define(["sap/m/MessageToast",
 		var StoreLanding = Controller.extend("sap.ui.chattes.view.App", {
 
 			onInit: function () {
-				this.oModel = new sap.ui.model.json.JSONModel({
-					scannedItem: "",
-					selectedItem: [
-						{
-							item: "Horlicks Biscuits",
-							itemImage: true,
-							quantity: 0
-						},
-						{
-							item: "Tata Tea",
-							itemImage: true,
-							quantity: 0
-						}
-					],
-					cart: [],
-					recommended: [
-						{
-							item: "Horlicks Biscuits",
-							itemImage: true,
-							quantity: 0
-						},
-						{
-							item: "Tata Tea",
-							itemImage: true,
-							quantity: 0
-						}
-					],
-					completedCount: 1
-				});
+				// this.oModel = new sap.ui.model.json.JSONModel({
+				// 	scannedItem: "",
+				// 	selectedItem: [
+				// 		{
+				// 			item: "Horlicks Biscuits",
+				// 			itemImage: true,
+				// 			quantity: 0
+				// 		},
+				// 		{
+				// 			item: "Tata Tea",
+				// 			itemImage: true,
+				// 			quantity: 0
+				// 		}
+				// 	],
+				// 	cart: [],
+				// 	recommended: [
+				// 		{
+				// 			item: "Horlicks Biscuits",
+				// 			itemImage: true,
+				// 			quantity: 0
+				// 		},
+				// 		{
+				// 			item: "Tata Tea",
+				// 			itemImage: true,
+				// 			quantity: 0
+				// 		}
+				// 	],
+				// 	completedCount: 1
+				// });
+				this.oModel = new sap.ui.model.json.JSONModel(jQuery.sap.getModulePath("sap.ui.chattes.model","/mock.json"));
 				this.getView().setModel(this.oModel);
 			},
 
@@ -49,6 +50,10 @@ sap.ui.define(["sap/m/MessageToast",
 				});
 				this.oModel.setProperty("/scannedItem", "");
 				this.oModel.refresh();
+			},
+			checkout: function () {
+				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+				oRouter.navTo("checkout");
 			},
 
 			// toggleCompleted: function () {

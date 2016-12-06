@@ -37,7 +37,15 @@ sap.ui.define(["sap/ui/core/UIComponent",
 							view: "App",
 							viewPath: "sap.ui.chattes.view",
 							targetControl: "app"
+						},
+						{
+							pattern: "checkout",
+							name: "checkout",
+							view: "CheckOut",
+							viewPath: "sap.ui.chattes.view",
+							targetControl: "app"
 						}
+
 					]
 				}
 			},
