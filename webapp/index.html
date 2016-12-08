@@ -26,7 +26,11 @@
 			"sap.ui.chattes": "./"
 		}'> /* endOfResourceroots */
 	</script>
-
+	<script src = "resources/qcode-decoder.min.js"></script>
+	<script>
+	jQuery.sap.registerModulePath("QCodeDecoder","resources/qcode-decoder.min");
+	</script>
 </head>
 <body class="sapUiBody" id="root" role="application"></body>
 </html>
+

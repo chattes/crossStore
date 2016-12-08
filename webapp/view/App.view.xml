@@ -1,27 +1,50 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.ui.chattes.view.App" resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns="sap.m" controllerName="sap.ui.chattes.view.App"
+resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
 	<Shell>
 		<App>
 			<Page backgroundDesign="Solid">
 				<content>
-					<Input class="todoInput" value="{/scannedItem}" placeholder="{i18n>INPUT_PLACEHOLDER}" change="addTodo" />
-					<List id="todo-list" items="{/selectedItem}" select="toggleCompleted"
-						mode="MultiSelect"
-						growing="true"
-						growingScrollToLoad="true"
-						showNoData="false"
-						showSeparators="None"
-						rememberSelections="false">
-						<CustomListItem selected="{itemImage}">
-							<Input class="todoListInput" value="{item}" />
-						</CustomListItem>
-					</List>
+					<Panel expandable="true" expanded="true" headerText="Scanned Items" width="auto" class="sapUiResponsiveMargin">
+						<content>
+							<Table id="idscanned" inset="false" items="{path:'SCANNED>/selectedItems'}" backgroundDesign="Transparent">
+								<columns>
+									<Column width="15%">
+										<Text text="Selected" />
+									</Column>
+									<Column width="30%">
+										<Text text="Product" />
+									</Column>
+									<Column width="40%">
+										<Text text="" />
+									</Column>
+									<Column width="15%">
+										<Text text="Quantity" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<CheckBox selected="{SCANNED>selected}" />
+											<Text text="{SCANNED>Description}"></Text>
+											<Image src="{SCANNED>imageURL}" densityAware="true" width="5em" height="5em">
+												<layoutData>
+													<FlexItemData growFactor="0" />
+												</layoutData>
+											</Image>
+											<Input class="todoListInput" value="{SCANNED>GenericMaterial}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</Panel>
 					<Panel expandable="true" expanded="false" headerText="Basket Analysis" width="auto" class="sapUiResponsiveMargin">
-					<content>
-					</content>
+						<content>
+						</content>
 					</Panel>
 					<Panel expandable="true" expanded="true" headerText="Recommendations and Offers" width="auto" class="sapUiResponsiveMargin">
-					<content>
-				<List id="reco-list" items="{/recommended}" select="toggleCompleted"
+						<content>
+							<!--<List id="reco-list" items="{/recommended}" select="toggleCompleted"
 						mode="MultiSelect"
 						growing="true"
 						growingScrollToLoad="true"
@@ -31,18 +54,21 @@
 						<CustomListItem selected="{itemImage}">
 							<Input class="todoListInput" value="{item}" />
 						</CustomListItem>
-					</List>
-					</content>
+					</List>-->
+						</content>
 					</Panel>
-					</content>
+				</content>
 				<footer>
 					<Bar>
 						<contentMiddle>
-							<Button visible = "true" icon="sap-icon://cart" text="Add to Cart ({/completedCount} item/s)" press="clearCompleted" />
+							<Button visible="true" icon="sap-icon://cart" text="Add to Cart)" press="clearCompleted" />
 						</contentMiddle>
 						<contentRight>
-							<Button visible = "true" icon="sap-icon://physical-activity" text="Checkout" press="checkout" />
+							<Button visible="true" icon="sap-icon://physical-activity" text="Checkout" press="checkout" />
 						</contentRight>
+						<contentLeft>
+							<Button visible="true" icon="sap-icon://add-photo" text="Read QR" press="onscan" />
+						</contentLeft>
 					</Bar>
 				</footer>
 			</Page>

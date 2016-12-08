@@ -1,6 +1,5 @@
 .todoInput {
 	padding-left: 0.25rem;
-
 }
 
 .todoInput,
@@ -8,8 +7,14 @@
 	padding-right: 0.25rem;
 	width: 80%
 }
+
 .todoListQty {
 	padding-right: 0.25rem;
 	width: 20%
 }
 
+.centre {
+	margin-left: auto;
+	margin-right: auto;
+	display: block
+}

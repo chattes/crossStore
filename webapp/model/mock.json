@@ -4,12 +4,14 @@
       {
          "item": "Horlicks Biscuits",
          "itemImage": true,
-         "quantity": 0
+         "quantity": 0,
+         "image":"../images/horlicks.jpg"
       },
       {
          "item": "Tata Tetley",
          "itemImage": true,
-         "quantity": 0
+         "quantity": 0,
+         "image":"../images/chart.png"
       }
    ],
    "cart": [],
@@ -25,5 +27,5 @@
          "quantity": 0
       }
    ],
-   "completedCount": 1
+   "completedCount": 0
 }

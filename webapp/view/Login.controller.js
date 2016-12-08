@@ -42,8 +42,9 @@ sap.ui.define(["sap/m/MessageToast",
 
 			handleLogin: function (oEvent) {
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("landing");
+				oRouter.navTo("landing",{mat:0});
 			}
+
 		});
 		return LoginController;
 

@@ -1,6 +1,6 @@
 <mvc:View controllerName="sap.ui.chattes.view.Login" xmlns:l="sap.ui.layout"
           xmlns:u="sap.ui.unified" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-          xmlns:f="sap.ui.layout.form">
+          xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml">
     <Panel width="auto" expanded="true" class="sapUiResponsiveMargin"
            design="Transparent">
 	   
