@@ -55,6 +55,13 @@ sap.ui.define(["sap/ui/core/UIComponent",
 							view: "Confectioneries",
 							viewPath: "sap.ui.chattes.view",
 							targetControl: "app"
+						},
+						{
+							pattern: "search",
+							name: "search",
+							view: "Search",
+							viewPath: "sap.ui.chattes.view",
+							targetControl: "app"
 						}
 						
 

@@ -17,15 +17,7 @@
 /* 	border-left: 1px solid lightgray; */
 /* } */
 
-#__xmlview1--idProductsTable-tblHeader>th{
-	border-right: 1px solid lightgray;
-	border-left: 1px solid lightgray;
-}
 
-#__xmlview1--idProductsTable-tblBody>tr>td{
-	border-right: 1px solid lightgray;
-	border-left: 1px solid lightgray;
-}
  
 .sapMListTblNavCol{
 	width:0rem!important;

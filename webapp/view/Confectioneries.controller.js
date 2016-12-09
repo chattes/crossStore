@@ -38,6 +38,10 @@ sap.ui.define([ "jquery.sap.global", "sap/ui/core/mvc/Controller",
 				//var bindEx = oList.bindAggregation("items",model,new sap.m.ColumnListItem());
 			}
 
+		},
+		goToSearch:function(oEvent){
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("search");
 		}
 
 	});
