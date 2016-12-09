@@ -1,10 +1,122 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<core:View
-	xmlns:core="sap.ui.core"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	xmlns:html="http://www.w3.org/1999/xhtml"
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml"
 	controllerName="sap.ui.chattes.view.CheckOut">
-	<Panel text="Checkout">
+
+
+	<Panel title="Checkout">
+
+
+
+		<HBox>
+			<core:Icon src="sap-icon://cart-2" size="4rem" width="30%"
+				height="30%" class="cartIcon"></core:Icon>
+
+
+
+			<VBox width="50%">
+				<HBox class="totalAmount">
+					<Label text="Total" class="labelStyle" />
+					<Input value="xyzw">
+					</Input>
+
+				</HBox>
+				<HBox>
+					<Label text="Your Saving" class="labelStyle" />
+					<Input value="xyzw">
+					</Input>
+				</HBox>
+			</VBox>
+
+
+			<VBox class="applyCouponButtonBoxStyle">
+				<Button id="applyCoupon" text="Apply Coupon" class="applyCouponStyle">
+
+
+				</Button>
+			</VBox>
+		</HBox>
+
+
+
+
+		<Table id="idProductsTable" items="{/cart}" inset="false" >
+
+			<columns >
+				<Column width="42%" hAlign="Begin"  class="productsTable">
+					<Text text="Item" />
+				</Column>
+
+				<Column>
+					<Text text="Count" />
+				</Column>
+
+				<Column>
+					<Text text="Price" />
+				</Column>
+
+				<Column>
+					<Text text="Packed" />
+				</Column>
+			</columns>
+
+			<items>
+				<ColumnListItem vAlign="Middle" type="Navigation">
+					<cells class="tableStyle">
+						<Text text="{item}" />
+						<ObjectNumber number="{quantity}" />
+						<ObjectNumber number="{= ${quantity} * 15}" />
+						<CheckBox />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+
+		<VBox class="contentPadding">
+
+			<HBox>
+				<RadioButton groupName="GroupA" selected="true"
+					select="onSelectradioButtonDeliveryHome" />
+				<Image src="" height="40px" width="40px" />
+
+				<Label text="Deliver Home" class="labelStyle"></Label>
+
+
+			</HBox>
+			<HBox>
+				<RadioButton groupName="GroupA" id="radioButtonDeliveryAtGate"
+					select="onSelectradioButtonDeliveryAtGate" />
+				<Image src="" height="40px" width="40px" />
+				<Label text="I will collect at gate" class="labelStyle"></Label>
+			</HBox>
+
+
+		</VBox>
+		<VBox id="deliverHome">
+			<Text text="Will be delivered by 8.30pm.\nEnjoy your day!"></Text>
+			<Text
+				text="\nGet 12% of ur Purchase Value as a discount on your Next purchase"></Text>
+			<Text text="\n*Coupon code will be sent to your Email address"></Text>
+
+		</VBox>
+
+		<VBox id="deliverAtGate" visible="false">
+			<Text text="30 Mins - see you at the gate"></Text>
+			<Text text="\nWith a voucher of 10% of your purchase value"></Text>
+		</VBox>
+		<HBox>
+				<Button text="Submit" press="proceed"/>
+		</HBox>
+
+
 	</Panel>
+
+
+
+
+
+
+
+
 </core:View>
