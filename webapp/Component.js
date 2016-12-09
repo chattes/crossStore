@@ -1,8 +1,9 @@
 sap.ui.define(["sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/model/resource/ResourceModel"
-],
-	function (UIComponent, JSONModel, ResourceModel) {
+		"jquery.sap.global",
+		"sap/ui/model/json/JSONModel",
+		"sap/ui/model/resource/ResourceModel"
+	],
+	function (UIComponent, jquery, JSONModel, ResourceModel) {
 		"use strict";
 		var Component = UIComponent.extend("sap.ui.chattes.Component", {
 
@@ -21,24 +22,27 @@ sap.ui.define(["sap/ui/core/UIComponent",
 						targetAggregation: "pages",
 						clearTarget: true
 					},
-					routes:
-					[
-						{
+					routes: [{
 							pattern: "",
 							name: "login",
 							view: "Login",
 							viewPath: "sap.ui.chattes.view",
 							targetControl: "app"
 
-						},
-						{
-							pattern: "landing",
+						}, {
+							pattern: "landing/{mat}",
 							name: "landing",
 							view: "App",
 							viewPath: "sap.ui.chattes.view",
 							targetControl: "app"
-						},
-						{
+						}, {
+							viewType: "JS",
+							pattern: "scan",
+							name: "scan",
+							view: "scanner",
+							viewPath: "sap.ui.chattes.view",
+							targetControl: "app"
+						}, {
 							pattern: "checkout",
 							name: "checkout",
 							view: "CheckOut",
@@ -54,14 +58,17 @@ sap.ui.define(["sap/ui/core/UIComponent",
 						}
 						
 
+
+
 					]
 				}
 			},
 			init: function () {
 				UIComponent.prototype.init.apply(this, arguments);
 				this.getRouter().initialize();
+
+
 			}
 		});
 		return Component;
 	});
-

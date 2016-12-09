@@ -1,6 +1,5 @@
 .todoInput {
 	padding-left: 0.25rem;
-
 }
 
 .todoInput,
@@ -8,6 +7,7 @@
 	padding-right: 0.25rem;
 	width: 80%
 }
+
 .todoListQty {
 	padding-right: 0.25rem;
 	width: 20%
@@ -66,4 +66,16 @@
 	width:0;
 }
 
+.removePanelBottomBorder {
 
+    padding: 0rem;                                                       
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+
+.centre {
+	margin-left: auto;
+	margin-right: auto;
+	display: block
+}
