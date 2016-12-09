@@ -3,8 +3,14 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
+	xmlns:u="sap.ui.unified"
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	controllerName="sap.ui.chattes.view.CheckOut">
+	<u:Shell>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="Welcome" />
+		</u:user>	
 	<Panel text="Checkout">
 	</Panel>
+	</u:Shell>
 </core:View>

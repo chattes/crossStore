@@ -1,9 +1,13 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns="sap.m" controllerName="sap.ui.chattes.view.App"
 resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n" displayBlock="true">
-	<Shell>
+	<u:Shell>
+		<u:user>
+			<u:ShellHeadUserItem image="sap-icon://person-placeholder" username="Welcome" />
+		</u:user>
 		<App>
 			<Page backgroundDesign="Solid">
 				<content>
+					<Input submit="_onObjectMatched"></Input>
 					<Panel expandable="true" expanded="true" headerText="Scanned Items" width="auto" class="sapUiResponsiveMargin">
 						<content>
 							<Table id="idscanned" inset="false" items="{path:'SCANNED>/selectedItems'}" backgroundDesign="Transparent">
@@ -31,30 +35,31 @@ resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n
 													<FlexItemData growFactor="0" />
 												</layoutData>
 											</Image>
-											<Input class="todoListInput" value="{SCANNED>GenericMaterial}" />
+											<Input class="todoListInput" value="{SCANNED>quantity}" />
 										</cells>
 									</ColumnListItem>
 								</items>
 							</Table>
 						</content>
 					</Panel>
-					<Panel expandable="true" expanded="false" headerText="Basket Analysis" width="auto" class="sapUiResponsiveMargin">
+					<Panel expandable="true" expanded="true" headerText="Basket Analysis" width="auto" class="sapUiResponsiveMargin">
 						<content>
+							<List headerText="You might also check these..." items="{path: 'SCANNED>/basketanalysis'}">
+								<items>
+									<StandardListItem title="{SCANNED>BA_GenericMaterialDescription}" description="{SCANNED>BA_GenericMaterial}" icon="{SCANNED>imageURL}"
+									iconDensityAware="false" iconInset="false" />
+								</items>
+							</List>
 						</content>
 					</Panel>
-					<Panel expandable="true" expanded="true" headerText="Recommendations and Offers" width="auto" class="sapUiResponsiveMargin">
+					<Panel expandable="true" expanded="fasle" headerText="Other Products" width="auto" class="sapUiResponsiveMargin">
 						<content>
-							<!--<List id="reco-list" items="{/recommended}" select="toggleCompleted"
-						mode="MultiSelect"
-						growing="true"
-						growingScrollToLoad="true"
-						showNoData="false"
-						showSeparators="None"
-						rememberSelections="false">
-						<CustomListItem selected="{itemImage}">
-							<Input class="todoListInput" value="{item}" />
-						</CustomListItem>
-					</List>-->
+							<List headerText="Other customers have bought..." items="{path: 'SCANNED>/othercustomer'}">
+								<items>
+									<StandardListItem title="{SCANNED>OC_MaterialDescription}" description="{SCANNED>OC_MaterialNumber}" icon="{SCANNED>imageURL}"
+									iconDensityAware="false" iconInset="false" />
+								</items>
+							</List>
 						</content>
 					</Panel>
 				</content>
@@ -73,5 +78,5 @@ resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n
 				</footer>
 			</Page>
 		</App>
-	</Shell>
+	</u:Shell>
 </mvc:View>
