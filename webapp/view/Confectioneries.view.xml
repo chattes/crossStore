@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="sap.ui.chattes.view.Confectioneries">
+
+	<Page>
+		<!-- <List headerText="Confectioneries" items="{/customerCarts}"> -->
+
+		<!-- <CustomListItem> -->
+		<!-- <Panel expandable="true" expanded="false" width="auto" -->
+		<!-- class="sapUiResponsiveMargin" expand="expandList"> -->
+		<!-- <headerToolbar> -->
+		<!-- <Toolbar height="3rem"> -->
+		<!-- <Title text="{customerId}" /> -->
+		<!-- <ToolbarSpacer /> -->
+		<!-- </Toolbar> -->
+
+		<!-- </headerToolbar> -->
+		<!-- <content > -->
+		<!-- <List id="expandedItem" items ="{path:'Pcart',templateShareable:true}" 
+			> -->
+		<!-- <CustomListItem> -->
+		<!-- <Text text="{item}"/> -->
+
+		<!-- </CustomListItem > -->
+
+		<!-- </List> -->
+
+		<!-- </content> -->
+
+
+		<!-- </Panel> -->
+		<!-- </CustomListItem> -->
+
+		<!-- </List> -->
+		<!-- <Button text="aaa" press="abc" /> -->
+
+
+
+
+		<t:TreeTable id="TreeTableBasic"
+			rows="{path:'/customerCarts', parameters: {arrayNames:['Pcart']},templateShareable:true}"
+			enableSelectAll="false" ariaLabelledBy="title" class="treeTableClass">
+
+			<t:columns>
+				<t:Column>
+					<Label text="customerId" />
+					<t:template>
+						<Text text="{customerId}" />
+					</t:template>
+				</t:Column>
+				<t:Column>
+					<Label text="Item with Batch code" />
+					<t:template>
+						<Text text="{item}" />
+					</t:template>
+				</t:Column>
+				<t:Column>
+					<Label text="Quantity" />
+					<t:template>
+						<Text text="{quantity}" />
+					</t:template>
+				</t:Column>
+				<t:Column>
+					<Label text="Uom" />
+					<t:template>
+						<Text text="{Uom}" />
+					</t:template>
+				</t:Column>
+
+				<t:Column>
+					<Label text="Status" />
+					<t:template>
+						<CheckBox visible="{= !!${status}}"/>
+					</t:template>
+				</t:Column>
+			</t:columns>
+
+
+
+		</t:TreeTable>
+
+
+
+	</Page>
+
+
+
+
+</core:View>
