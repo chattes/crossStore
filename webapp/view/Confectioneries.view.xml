@@ -2,70 +2,10 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
 	xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:temp="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
 	controllerName="sap.ui.chattes.view.Confectioneries">
 
 	<Page>
-	
-		<List headerText="Confectioneries" items="{/customerCarts}">
-
-			<CustomListItem>
-				<Panel expandable="true" expanded="false" width="auto"
-					 expand="expandList">
-					<headerToolbar>
-						<Toolbar height="3rem">
-							<Title text="{customerId}" />
-							<ToolbarSpacer />
-						</Toolbar>
-
-					</headerToolbar>
-					<content>
-<!-- 						<List id="expandedItem" items="{path:'Pcart',templateShareable:true}"> -->
-<!-- 							<CustomListItem> -->
-<!-- 								<Text text="{item}" /> -->
-
-<!-- 							</CustomListItem> -->
-
-<!-- 						</List> -->
-
-							<Table id="expandedItem" inset="false" items="{path:'Pcart',templateShareable:true}" backgroundDesign="Transparent">
-								<columns>
-									<Column width="25%">
-										<Text text="Item" />
-									</Column>
-									<Column width="30%">
-										<Text text="image" />
-									</Column>
-									<Column width="15%">
-										<Text text="Quantity" />
-									</Column>
-									<Column width="30%">
-										<Text text="status" />
-									</Column>
-								</columns>
-								<items>
-									<ColumnListItem>
-										<cells>
-											<Text text="{item}"></Text>
-											
-											<Image src="{itemImage}" densityAware="true" width="3em" height="3em">
-												<layoutData>
-													<FlexItemData growFactor="0" />
-												</layoutData>
-											</Image>
-											<Text text="{quantity}"></Text>
-											<CheckBox />
-										</cells>
-									</ColumnListItem>
-								</items>
-							</Table>
-
-					</content>
-
-
-				</Panel>
-			</CustomListItem>
-
-		</List>
 
 
 
@@ -77,9 +17,59 @@
 			</t:template> </t:Column> <t:Column> <Label text="Quantity" /> <t:template> 
 			<Text text="{quantity}" /> </t:template> </t:Column> <t:Column> <Label text="Uom" 
 			/> <t:template> <Text text="{Uom}" /> </t:template> </t:Column> <t:Column> 
-			<Label text="Status" /> <t:template> <CheckBox visible="{= !!${status}}"/> 
-			</t:template> </t:Column> </t:columns> </t:TreeTable> -->
-
+			<Label text="Status" /> <t:template> <CheckBox visible="{= !!${status}}" 
+			/> </t:template> </t:Column> </t:columns> </t:TreeTable> -->
+			
+			
+			
+		<List headerText="Confectioneries" items="{/customerCarts}">
+			<CustomListItem>
+				<Panel expandable="true" expanded="false" width="auto" expand="expandList">
+					<headerToolbar>
+						<Toolbar height="3rem">
+							<Title text="{customerId}" />
+							<ToolbarSpacer />
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<Table id="expandedItem" inset="false"
+							items="{path:'Pcart',templateShareable:true}" backgroundDesign="Transparent">
+							<columns>
+								<Column width="25%">
+									<Text text="Item" />
+								</Column>
+								<Column width="30%">
+									<Text text="image" />
+								</Column>
+								<Column width="15%">
+									<Text text="Quantity" />
+								</Column>
+								<Column width="30%">
+									<Text text="status" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{item}"></Text>
+										<Image src="{itemImage}" densityAware="true" width="3em"
+											height="3em">
+											<layoutData>
+												<FlexItemData growFactor="0" />
+											</layoutData>
+										</Image>
+										<Text text="{quantity}"></Text>
+										<CheckBox selected="{status}" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Panel>
+			</CustomListItem>
+		</List>
+		
+		<Button text="Go to search" press="goToSearch"></Button>
 	</Page>
 
 

@@ -2,7 +2,7 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
 	xmlns:t="sap.ui.table" xmlns:html="http://www.w3.org/1999/xhtml"
-	controllerName="sap.ui.chattes.view.CheckOut">
+	xmlns:tnt="sap.tnt" controllerName="sap.ui.chattes.view.CheckOut">
 
 
 	<Panel title="Checkout">
@@ -41,44 +41,144 @@
 
 
 
-		<Table id="idProductsTable" items="{/cart}" inset="false" >
+		<!-- <Table id="idProductsTable" items="{/cart}" inset="false" > <columns 
+			> <Column width="42%" hAlign="Begin" class="productsTable"> <Text text="Item" 
+			/> </Column> <Column> <Text text="Count" /> </Column> <Column> <Text text="Price" 
+			/> </Column> <Column> <Text text="Packed" /> </Column> </columns> <items> 
+			<ColumnListItem vAlign="Middle" type="Navigation"> <cells class="tableStyle"> 
+			<Text text="{item}" /> <ObjectNumber number="{quantity}" /> <ObjectNumber 
+			number="{= ${quantity} * 15}" /> <CheckBox /> </cells> </ColumnListItem> 
+			</items> </Table> -->
 
-			<columns >
-				<Column width="42%" hAlign="Begin"  class="productsTable">
-					<Text text="Item" />
-				</Column>
 
-				<Column>
-					<Text text="Count" />
-				</Column>
+		<!-- <t:TreeTable id="idProductsTable" -->
+		<!-- rows="{path:'/cart1', parameters: -->
+		<!-- {arrayNames:['items']},templateShareable:true}" -->
+		<!-- enableSelectAll="false" ariaLabelledBy="title" class="treeTableClass"> -->
+		<!-- <t:columns> -->
+		<!-- <t:Column> -->
+		<!-- <Label text="Category" /> -->
+		<!-- <t:template> -->
+		<!-- <Text text="{category}" /> -->
+		<!-- </t:template> -->
+		<!-- </t:Column> -->
+		<!-- <t:Column> -->
+		<!-- <Label text="Item with Batch code" /> -->
+		<!-- <t:template> -->
+		<!-- <Text text="{item}" /> -->
+		<!-- </t:template> -->
+		<!-- </t:Column> -->
+		<!-- <t:Column> -->
+		<!-- <Label text="Quantity" /> -->
+		<!-- <t:template> -->
+		<!-- <Text text="{quantity}" /> -->
+		<!-- </t:template> -->
+		<!-- </t:Column> -->
+		<!-- <t:Column> -->
+		<!-- <Label text="Image" /> -->
+		<!-- <t:template> -->
+		<!-- <Image src="{itemImage}" densityAware="true" width="3em" -->
+		<!-- height="3em" visible="{= !!${status}}"> -->
+		<!-- <layoutData> -->
+		<!-- <FlexItemData growFactor="0" /> -->
+		<!-- </layoutData> -->
+		<!-- </Image> -->
+		<!-- </t:template> -->
+		<!-- </t:Column> -->
+		<!-- <t:Column> -->
+		<!-- <Label text="Status" /> -->
+		<!-- <t:template> -->
 
-				<Column>
-					<Text text="Price" />
-				</Column>
+		<!-- <CheckBox visible="{= !!${status}}" /> -->
 
-				<Column>
-					<Text text="Packed" />
-				</Column>
-			</columns>
 
-			<items>
-				<ColumnListItem vAlign="Middle" type="Navigation">
-					<cells class="tableStyle">
-						<Text text="{item}" />
-						<ObjectNumber number="{quantity}" />
-						<ObjectNumber number="{= ${quantity} * 15}" />
-						<CheckBox />
-					</cells>
-				</ColumnListItem>
-			</items>
-		</Table>
+		<!-- </t:template> -->
+		<!-- </t:Column> -->
+		<!-- </t:columns> -->
+		<!-- </t:TreeTable> -->
+		</Panel>
+		<Panel>
+			<Toolbar>
+				<ToolbarSpacer width="1rem" />
+				<Title text="Category" />
+				<ToolbarSpacer />
+				<Text text="Status" />
+
+
+			</Toolbar>
+		<List items="{/cart1}">
+			<CustomListItem>
+				<Panel expandable="true" expanded="false" width="auto" expand="expandList">
+					<headerToolbar>
+						<Toolbar height="3rem">
+							<Title text="{category}" />
+
+							<ToolbarSpacer width="5rem" />
+							<!-- <Input value="xyzw" width="4rem"/> -->
+
+
+							<ToolbarSpacer width="9rem" />
+							<!-- <Input value="xyzw" width="4rem"/> -->
+							<ToolbarSpacer />
+							<Button text="done"></Button>
+
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<Table id="expandedItem" inset="false"
+							items="{path:'items',templateShareable:true}" backgroundDesign="Transparent">
+							<columns>
+								<Column width="25%">
+									<Text text="Item" />
+								</Column>
+								<Column width="20%">
+									<Text text="image" />
+								</Column>
+								<Column width="15%">
+									<Text text="Quantity" />
+								</Column>
+								<Column width="20%">
+									<Text text="Price" />
+								</Column>
+								<Column width="20%">
+									<Text text="Total"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{item}"></Text>
+										<Image src="{itemImage}" densityAware="true" width="3em"
+											height="3em">
+											<layoutData>
+												<FlexItemData growFactor="0" />
+											</layoutData>
+										</Image>
+										<Text text="{quantity}"></Text>
+										<Text text="50"></Text>
+										<Text text="652"></Text>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Panel>
+			</CustomListItem>
+		</List>
+
 
 		<VBox class="contentPadding">
 
 			<HBox>
 				<RadioButton groupName="GroupA" selected="true"
 					select="onSelectradioButtonDeliveryHome" />
-				<Image src="" height="40px" width="40px" />
+				<Image
+					src="http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg"
+					densityAware="true" width="3em" height="3em">
+					<layoutData>
+						<FlexItemData growFactor="0" />
+					</layoutData>
+				</Image>
 
 				<Label text="Deliver Home" class="labelStyle"></Label>
 
@@ -87,7 +187,13 @@
 			<HBox>
 				<RadioButton groupName="GroupA" id="radioButtonDeliveryAtGate"
 					select="onSelectradioButtonDeliveryAtGate" />
-				<Image src="" height="40px" width="40px" />
+				<Image
+					src="http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg"
+					densityAware="true" width="3em" height="3em">
+					<layoutData>
+						<FlexItemData growFactor="0" />
+					</layoutData>
+				</Image>
 				<Label text="I will collect at gate" class="labelStyle"></Label>
 			</HBox>
 
@@ -106,7 +212,7 @@
 			<Text text="\nWith a voucher of 10% of your purchase value"></Text>
 		</VBox>
 		<HBox>
-				<Button text="Submit" press="proceed"/>
+			<Button text="Submit" press="proceed" />
 		</HBox>
 
 

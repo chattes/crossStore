@@ -3,106 +3,193 @@
 	"selectedItem": [
 		{
 			"item": "Horlicks Biscuits",
-			"itemImage": true,
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 			"quantity": 0
 		},
 		{
 			"item": "Tata Tetley",
-			"itemImage": true,
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 			"quantity": 0
 		}
 	],
 	"cart": [
 		{
 			"item": "Horlicks Biscuits",
-			"itemImage": true,
-			"quantity": 3
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+			"quantity": 3,
+			"Uom": "Packs",
+			"status": true
 		},
 		{
 			"item": "Tata Tetley",
-			"itemImage": true,
-			"quantity": 5
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+			"quantity": 5,
+			"Uom": "Nos",
+			"status": true
+		}
+	],
+	"cart1": [
+		{
+			"category": "Biscuits",
+			"items": [
+				{
+					"item": "Horlicks Biscuits",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 3,
+					"Uom": "Packs",
+					"status": true
+				},
+				{
+					"item": "Tata Tetley",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 5,
+					"Uom": "Nos",
+					"status": true
+				}
+			]
+		},
+		{
+			"category": "apparels",
+			"items": [
+				{
+					"item": "Coke",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 7,
+					"Uom": "Packs",
+					"status": true
+				},
+				{
+					"item": "Horlicks Biscuits",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 3,
+					"Uom": "Packs",
+					"status": true
+				},
+				{
+					"item": "Tata Tetley",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 5,
+					"Uom": "Nos",
+					"status": true
+				}
+			]
+		},
+		{
+			"category": "clothing",
+			"items": [
+				{
+					"item": "Horlicks Biscuits",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 3,
+					"Uom": "Packs",
+					"status": true
+				},
+				{
+					"item": "Tata Tetley",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 5,
+					"Uom": "Nos",
+					"status": true
+				},
+				{
+					"item": "Coke",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 7,
+					"Uom": "Packs",
+					"status": true
+				},
+				{
+					"item": "coffee",
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
+					"quantity": 4,
+					"Uom": "Nos",
+					"status": true
+				}
+			]
 		}
 	],
 	"customerCarts": [
 		{
 			"customerId": 1111,
 			"name": "Deepak S",
+			"packed": "sap-icon://status-positive",
 			"Pcart": [
 				{
 					"item": "Horlicks Biscuits",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 3,
-					"Uom":"Packs",
-					"status":"done"
+					"Uom": "Packs",
+					"status": true
 				},
 				{
 					"item": "Tata Tetley",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 5,
-					"Uom":"Nos",
-					"status":"done"
+					"Uom": "Nos",
+					"status": true
 				}
 			]
 		},
 		{
 			"customerId": 1115,
 			"name": "Sayali D",
+			"packed": "sap-icon://status-positive",
 			"Pcart": [
 				{
 					"item": "Horlicks Biscuits",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 8,
-					"Uom":"Packs",
-					"status":"done"
+					"Uom": "Packs",
+					"status": true
 				},
 				{
 					"item": "Tata Tetley",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 5,
-					"Uom":"Nos",
-					"status":"done"
+					"Uom": "Nos",
+					"status": true
 				},
 				{
 					"item": "Coke",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 7,
-					"Uom":"Packs",
-					"status":"done"
+					"Uom": "Packs",
+					"status": true
 				},
 				{
 					"item": "coffee",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 4,
-					"Uom":"Nos",
-					"status":"done"
+					"Uom": "Nos",
+					"status": true
 				}
 			]
 		},
 		{
 			"customerId": 1113,
 			"name": "Suman D",
+			"packed": "sap-icon://status-positive",
 			"Pcart": [
 				{
 					"item": "Horlicks Biscuits",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 5,
-					"Uom":"Packs",
-					"status":"done"
+					"Uom": "Packs",
+					"status": true
 				},
 				{
 					"item": "Tata Tetley",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 9,
-					"Uom":"Nos",
-					"status":"done"
+					"Uom": "Nos",
+					"status": true
 				},
 				{
 					"item": "Tata Salt",
-					"itemImage": true,
+					"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 					"quantity": 2,
-					"Uom":"Packs",
-					"status":"done"
+					"Uom": "Packs",
+					"status": true
 				}
 			]
 		}
@@ -110,14 +197,49 @@
 	"recommended": [
 		{
 			"item": "Horlicks Biscuits",
-			"itemImage": true,
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 			"quantity": 0
 		},
 		{
 			"item": "Tata Tea",
-			"itemImage": true,
+			"itemImage": "http://60-350.imran.myweb.cs.uwindsor.ca/archive/350_posters/f2012/images_F12/grapes1.jpg",
 			"quantity": 0
 		}
 	],
-	"completedCount": 1
+	"completedCount": 1,
+	"menu": [
+      {
+      	"status": "yes",
+        "picture": "http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg",
+        "ItemDescription" :"Rice/chaaval",
+        "Section":"Cereals",
+        "Shelf":"3rd Rack"
+      	
+      },
+      
+      {
+      	"status": "no",
+        "picture": "http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg",
+        "ItemDescription" :"Daal/parapu",
+        "Section":"Cereals",
+        "Shelf":"2nd Rack"
+      	
+      },
+      {
+      	"status": "wait",
+        "picture": "http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg",
+        "ItemDescription" :"Til seeds/sesame seeds",
+        "Section":"Gro-seeds",
+        "Shelf":"4th Rack"
+      	
+      },
+      {
+      	"status": "no",
+        "picture": "http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg",
+        "ItemDescription" :"Brinjal",
+        "Section":"Vegetable",
+        "Shelf":"1st Rack"
+      	
+      }
+    ]
 }

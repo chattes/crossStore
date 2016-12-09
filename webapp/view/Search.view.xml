@@ -1,0 +1,78 @@
+<mvc:View controllerName="sap.ui.chattes.view.Search" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page title=" ">
+				<Toolbar>
+				<content>
+					<SearchField width="50%" />
+					<Image src="http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg" height="1.7rem"/> 
+					<Image src="http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg" height="1.7rem"/>
+					<Image src="http://hdwpro.com/wp-content/uploads/2015/12/Widescreen-Image.jpg" height="1.7rem"/>
+				</content>
+				</Toolbar>
+				
+				<Table id="idProductsTable"
+					items="{path:'/menu'}">
+				
+						<columns>
+							<Column
+							 >
+								<Text text="Status" />
+							</Column>
+							<Column
+							>
+								<Text text="Picture" />
+							</Column>
+							<Column
+								>
+								<Text text="ItemDescription" />
+							</Column>
+							<Column
+								>
+								<Text text="Section" />
+							</Column>
+								<Column
+								>
+								<Text text="Shelf" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem vAlign="Middle" type="Navigation">
+								<cells>
+									<!--{path: 'ApplicationStatusID', formatter: '.applicationStatusFormatter' } -->
+										<core:Icon
+											src="sap-icon://color-fill"
+											class="size3"
+											color="{path:'status',formatter:'.formatCell'}"
+											>
+											<core:layoutData>
+												<FlexItemData growFactor="1" />
+											</core:layoutData>
+										</core:Icon>
+											
+										
+					
+										<Image
+												class="sapUiLargeMarginTop sapUiLargeMarginBottom"
+												width="2.5rem"
+												src="{picture}">
+										</Image>
+											
+										<ObjectIdentifier
+											text="{ItemDescription}" />
+												
+										<ObjectIdentifier
+											text="{Section}" />
+											
+										<ObjectIdentifier
+											text="{Shelf}" />
+					 
+								</cells>
+							</ColumnListItem>
+						</items>
+				</Table>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

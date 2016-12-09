@@ -66,7 +66,7 @@ resourceBundleName="sap.ui.chattes.i18n.messageBundle" resourceBundleAlias="i18n
 				<footer>
 					<Bar>
 						<contentMiddle>
-							<Button visible="true" icon="sap-icon://cart" text="Add to Cart)" press="clearCompleted" />
+							<Button visible="true" icon="sap-icon://cart" text="Add to Cart)" press="addToCart" />
 						</contentMiddle>
 						<contentRight>
 							<Button visible="true" icon="sap-icon://physical-activity" text="Checkout" press="checkout" />
