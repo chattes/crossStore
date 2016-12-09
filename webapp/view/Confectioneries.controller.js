@@ -28,11 +28,11 @@ sap.ui.define([ "jquery.sap.global", "sap/ui/core/mvc/Controller",
 				
 				var oList = this.getView().byId("expandedItem");
 				var itemTemplate = this.getView().byId("itemTemplate");
-				console.log("oList " + oList);
+//				console.log("oList " + oList);
 				///var oBinding = oList.bindItems("items");
 				//var model = oEvent.getSource().getModel().getData().customerCarts[number].Pcart;
 				var model = oBindContext.getBindingContext().getPath() + "/Pcart"
-				console.log("model " + model);
+//				console.log("model " + model);
 //				oList.bindItems(model,itemTemplate);
 				
 				//var bindEx = oList.bindAggregation("items",model,new sap.m.ColumnListItem());

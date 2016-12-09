@@ -5,83 +5,80 @@
 	controllerName="sap.ui.chattes.view.Confectioneries">
 
 	<Page>
-		<!-- <List headerText="Confectioneries" items="{/customerCarts}"> -->
+	
+		<List headerText="Confectioneries" items="{/customerCarts}">
 
-		<!-- <CustomListItem> -->
-		<!-- <Panel expandable="true" expanded="false" width="auto" -->
-		<!-- class="sapUiResponsiveMargin" expand="expandList"> -->
-		<!-- <headerToolbar> -->
-		<!-- <Toolbar height="3rem"> -->
-		<!-- <Title text="{customerId}" /> -->
-		<!-- <ToolbarSpacer /> -->
-		<!-- </Toolbar> -->
+			<CustomListItem>
+				<Panel expandable="true" expanded="false" width="auto"
+					 expand="expandList">
+					<headerToolbar>
+						<Toolbar height="3rem">
+							<Title text="{customerId}" />
+							<ToolbarSpacer />
+						</Toolbar>
 
-		<!-- </headerToolbar> -->
-		<!-- <content > -->
-		<!-- <List id="expandedItem" items ="{path:'Pcart',templateShareable:true}" 
-			> -->
-		<!-- <CustomListItem> -->
-		<!-- <Text text="{item}"/> -->
+					</headerToolbar>
+					<content>
+<!-- 						<List id="expandedItem" items="{path:'Pcart',templateShareable:true}"> -->
+<!-- 							<CustomListItem> -->
+<!-- 								<Text text="{item}" /> -->
 
-		<!-- </CustomListItem > -->
+<!-- 							</CustomListItem> -->
 
-		<!-- </List> -->
+<!-- 						</List> -->
 
-		<!-- </content> -->
+							<Table id="expandedItem" inset="false" items="{path:'Pcart',templateShareable:true}" backgroundDesign="Transparent">
+								<columns>
+									<Column width="25%">
+										<Text text="Item" />
+									</Column>
+									<Column width="30%">
+										<Text text="image" />
+									</Column>
+									<Column width="15%">
+										<Text text="Quantity" />
+									</Column>
+									<Column width="30%">
+										<Text text="status" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{item}"></Text>
+											
+											<Image src="{itemImage}" densityAware="true" width="3em" height="3em">
+												<layoutData>
+													<FlexItemData growFactor="0" />
+												</layoutData>
+											</Image>
+											<Text text="{quantity}"></Text>
+											<CheckBox />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+
+					</content>
 
 
-		<!-- </Panel> -->
-		<!-- </CustomListItem> -->
+				</Panel>
+			</CustomListItem>
 
-		<!-- </List> -->
-		<!-- <Button text="aaa" press="abc" /> -->
-
-
-
-
-		<t:TreeTable id="TreeTableBasic"
-			rows="{path:'/customerCarts', parameters: {arrayNames:['Pcart']},templateShareable:true}"
-			enableSelectAll="false" ariaLabelledBy="title" class="treeTableClass">
-
-			<t:columns>
-				<t:Column>
-					<Label text="customerId" />
-					<t:template>
-						<Text text="{customerId}" />
-					</t:template>
-				</t:Column>
-				<t:Column>
-					<Label text="Item with Batch code" />
-					<t:template>
-						<Text text="{item}" />
-					</t:template>
-				</t:Column>
-				<t:Column>
-					<Label text="Quantity" />
-					<t:template>
-						<Text text="{quantity}" />
-					</t:template>
-				</t:Column>
-				<t:Column>
-					<Label text="Uom" />
-					<t:template>
-						<Text text="{Uom}" />
-					</t:template>
-				</t:Column>
-
-				<t:Column>
-					<Label text="Status" />
-					<t:template>
-						<CheckBox visible="{= !!${status}}"/>
-					</t:template>
-				</t:Column>
-			</t:columns>
+		</List>
 
 
 
-		</t:TreeTable>
-
-
+		<!-- <t:TreeTable id="TreeTableBasic" rows="{path:'/customerCarts', parameters: 
+			{arrayNames:['Pcart']},templateShareable:true}" enableSelectAll="false" ariaLabelledBy="title" 
+			class="treeTableClass"> <t:columns> <t:Column> <Label text="customerId" /> 
+			<t:template> <Text text="{customerId}" /> </t:template> </t:Column> <t:Column> 
+			<Label text="Item with Batch code" /> <t:template> <Text text="{item}" /> 
+			</t:template> </t:Column> <t:Column> <Label text="Quantity" /> <t:template> 
+			<Text text="{quantity}" /> </t:template> </t:Column> <t:Column> <Label text="Uom" 
+			/> <t:template> <Text text="{Uom}" /> </t:template> </t:Column> <t:Column> 
+			<Label text="Status" /> <t:template> <CheckBox visible="{= !!${status}}"/> 
+			</t:template> </t:Column> </t:columns> </t:TreeTable> -->
 
 	</Page>
 

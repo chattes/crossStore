@@ -66,6 +66,13 @@
 	width:0;
 }
 
+.removePanelBottomBorder {
+
+    padding: 0rem;                                                       
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
 
 .centre {
 	margin-left: auto;
