@@ -12,6 +12,60 @@
 	padding-right: 0.25rem;
 	width: 20%
 }
+/* .sapMListTblCell .productsTable>td { */
+/* 	border-right: 1px solid lightgray; */
+/* 	border-left: 1px solid lightgray; */
+/* } */
+
+#__xmlview1--idProductsTable-tblHeader>th{
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+}
+
+#__xmlview1--idProductsTable-tblBody>tr>td{
+	border-right: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+}
+ 
+.sapMListTblNavCol{
+	width:0rem!important;
+}
+.cartIcon{
+	margin-top: 26px;
+    padding-right: 0.5rem;
+}
+.applyCouponButtonBoxStyle{
+	align-items: center;
+	
+}
+.totalAmount{
+	padding-left: 3rem;
+}
+
+.applyCouponStyle{
+	padding-left: 0.4rem;
+	height: 5rem;
+	position: absolute;
+}
+.labelStyle{
+	padding-top: 1rem;
+    padding-right: 0.3rem;
+    padding-left:0.3rem;
+}
+.contentPadding{
+	padding:1rem;
+}
+#__xmlview1--TreeTableBasic-sapUiTableColHdrScr{
+	padding-left:1.5rem;
+	
+}
+#__xmlview1--TreeTableBasic-sapUiTableRowHdrScr{
+	width:0;
+}
+#__xmlview1--TreeTableBasic-selall{
+	width:0;
+}
+
 
 .centre {
 	margin-left: auto;
