@@ -8,6 +8,7 @@
     "openui5-themelib_sap_bluecrystal": "openui5/packaged-themelib_sap_bluecrystal#~1.44.3",
     "openui5-sap.ui.unified": "openui5/packaged-sap.ui.unified#^1.44.3",
     "openui5-sap.ui.layout": "openui5/packaged-sap.ui.layout#^1.44.3",
-    "qcode-decoder": "^0.1.0"
+    "qcode-decoder": "^0.1.0",
+    "openui5-themelib_sap_goldreflection": "openui5/packaged-themelib_sap_goldreflection#^1.44.3"
   }
 }

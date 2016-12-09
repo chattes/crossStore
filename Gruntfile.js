@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 					"<%= dir.bower_components %>/openui5-sap.ui.core/resources",
 					"<%= dir.bower_components %>/openui5-sap.m/resources",
 					"<%= dir.bower_components %>/openui5-themelib_sap_bluecrystal/resources",
+					"<%= dir.bower_components %>/openui5-themelib_sap_goldreflection/resources",
 					"<%= dir.bower_components %>/openui5-sap.ui.unified/resources",
 					"<%= dir.bower_components %>/openui5-sap.ui.layout/resources",
 					"<%= dir.bower_components %>/qcode-decoder/build"
